@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody rb;
 
+	public AudioSource jingleAudio;
+
 	private int count = 0;
 
 	// Use this for initialization
@@ -54,6 +56,9 @@ public class PlayerController : MonoBehaviour {
 			go.SetActive (false);
 			this.count++;
 			SetCountText ();
+
+			jingleAudio.PlayDelayed(0);
+			//jingleAudio.Play(44100);
 		}
 	}
 }
